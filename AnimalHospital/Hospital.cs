@@ -36,6 +36,7 @@ namespace AnimalHospital
             } else
             {
                 patients.Remove(patient);
+                Console.WriteLine("Patient removed");
             }
         }
 

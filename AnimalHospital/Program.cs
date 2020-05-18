@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 
 namespace AnimalHospital
 {
@@ -32,7 +33,9 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine(" ");
+                Console.WriteLine("Patient name: ");
+                CheckoutPatient();
             } 
             else if(k == '3')
             {
@@ -59,7 +62,9 @@ namespace AnimalHospital
 
         static void CheckoutPatient()
         {
-            Console.WriteLine("aaaaaaaaaaaaaaaaaaaa");
+
+            string patientname = Console.ReadLine();
+            hospital.DischargePatient(hospital.FindPatientByName(patientname));
         }
 
 
