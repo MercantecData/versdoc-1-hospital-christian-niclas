@@ -34,6 +34,7 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
+<<<<<<< HEAD
 
                 Console.WriteLine(" ");
                 Console.WriteLine("Patient name: ");
@@ -42,6 +43,16 @@ namespace AnimalHospital
             else if(k == '3')
             {
                 Console.WriteLine("");
+=======
+                Console.WriteLine(" ");
+                Console.WriteLine("Patient name: ");
+                CheckoutPatient();
+
+            } 
+            else if(k == '3')
+            {
+                Console.WriteLine(" ");
+>>>>>>> Developer
                 ListPatients();
             }
             else if (k == '4')
@@ -65,7 +76,12 @@ namespace AnimalHospital
         static void ListPatients()
         {
             hospital.PatientList();
+<<<<<<< HEAD
         }
+=======
+        }
+
+>>>>>>> Developer
         static void CheckoutPatient()
         {
 
