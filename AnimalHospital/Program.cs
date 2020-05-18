@@ -37,7 +37,7 @@ namespace AnimalHospital
             else if(k == '3')
             {
                 Console.WriteLine("Not yet implemented!");
-                Console.WriteLine("Hej");
+                Console.WriteLine("");
             }
             else if (k == '4')
             {
@@ -55,6 +55,11 @@ namespace AnimalHospital
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
             return true;
+        }
+
+        static void ListPatients()
+        {
+            Console.WriteLine("Hello");
         }
 
         static void AdmitPatient()
