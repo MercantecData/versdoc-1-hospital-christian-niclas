@@ -34,19 +34,15 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-<<<<<<< HEAD
-                //Console.WriteLine("Not yet implemented!");
-                ListPatients();
-=======
+
                 Console.WriteLine(" ");
                 Console.WriteLine("Patient name: ");
                 CheckoutPatient();
->>>>>>> Developer
             } 
             else if(k == '3')
             {
-                Console.WriteLine("Not yet implemented!");
                 Console.WriteLine("");
+                ListPatients();
             }
             else if (k == '4')
             {
@@ -66,13 +62,10 @@ namespace AnimalHospital
             return true;
         }
 
-<<<<<<< HEAD
         static void ListPatients()
         {
             hospital.PatientList();
         }
-
-=======
         static void CheckoutPatient()
         {
 
@@ -80,8 +73,6 @@ namespace AnimalHospital
             hospital.DischargePatient(hospital.FindPatientByName(patientname));
         }
 
-
->>>>>>> Developer
         static void AdmitPatient()
         {
             string name;
