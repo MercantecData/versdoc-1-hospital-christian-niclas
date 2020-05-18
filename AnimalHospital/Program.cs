@@ -57,6 +57,12 @@ namespace AnimalHospital
             return true;
         }
 
+        static void CheckoutPatient()
+        {
+            Console.WriteLine("aaaaaaaaaaaaaaaaaaaa");
+        }
+
+
         static void AdmitPatient()
         {
             string name;
