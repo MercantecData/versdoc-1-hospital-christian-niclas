@@ -5,6 +5,7 @@ namespace AnimalHospital
     class Program
     {
         public static Hospital hospital;
+         
         static void Main(string[] args)
         {
             hospital = InitializeHospital();
@@ -32,7 +33,8 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                //Console.WriteLine("Not yet implemented!");
+                ListPatients();
             } 
             else if(k == '3')
             {
@@ -59,7 +61,7 @@ namespace AnimalHospital
 
         static void ListPatients()
         {
-            Console.WriteLine("Hello");
+            hospital.PatientList();
         }
 
         static void AdmitPatient()
