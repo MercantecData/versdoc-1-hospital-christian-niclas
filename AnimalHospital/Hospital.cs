@@ -52,5 +52,13 @@ namespace AnimalHospital
 
             return null;
         }
+
+        public void PatientList()
+        {
+            foreach(Patient apatients in patients)
+            {
+                Console.WriteLine(apatients.name + " " + apatients.age);
+            }
+        }
     }
 }
