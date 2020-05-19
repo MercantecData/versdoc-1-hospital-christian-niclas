@@ -7,6 +7,7 @@ namespace AnimalHospital
     class Hospital
     {
         public string name;
+        public static Doctor doc;
 
         public static Doctor doc;
 
@@ -55,24 +56,24 @@ namespace AnimalHospital
             return null;
         }
 
-        public void PatientList()
-        {
-            foreach(Patient apatients in patients)
-            {
-                Console.WriteLine(apatients.name + " " + apatients.age);
-            }
+        public void PatientList()
+        {
+            foreach(Patient apatients in patients)
+            {
+                Console.WriteLine(apatients.name + " " + apatients.age);
+            }
         }
 
-        public void Together(string dname, Patient patient)
-        {
-            foreach(Doctor d in doctors)
-            {
-                if(d.name == dname)
-                {
-                    Console.WriteLine("Found Doctor");
-                    d.assignedPatients.Add(patient);
-                }
-            }
+        public void Together(string dname, Patient patient)
+        {
+            foreach(Doctor d in doctors)
+            {
+                if(d.name == dname)
+                {
+                    Console.WriteLine("Found Doctor");
+                    d.assignedPatients.Add(patient);
+                }
+            }
         }
     }
 }
