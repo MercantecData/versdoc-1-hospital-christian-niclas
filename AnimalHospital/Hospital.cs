@@ -58,6 +58,18 @@ namespace AnimalHospital
             foreach(Patient apatients in patients)
             {
                 Console.WriteLine(apatients.name + " " + apatients.age);
+            }
+        }
+
+        public void Together(string dname, Patient patient)
+        {
+            foreach(Doctor d in doctors)
+            {
+                if(d.name == dname)
+                {
+                    Console.WriteLine("Found Doctor");
+                    d.assignedPatients.Add(patient);
+                }
             }
         }
     }
