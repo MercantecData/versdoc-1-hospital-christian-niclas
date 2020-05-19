@@ -1,10 +1,12 @@
 ﻿using System;
-
+using System.Dynamic;
+
 namespace AnimalHospital
 {
     class Program
     {
         public static Hospital hospital;
+         
         static void Main(string[] args)
         {
             hospital = InitializeHospital();
@@ -32,19 +34,23 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine(" ");
+                Console.WriteLine("Patient name: ");
+                CheckoutPatient();
             } 
             else if(k == '3')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine(" ");
+                ListPatients();
             }
             else if (k == '4')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine(" ");
+                ListDoctors();
             }
             else if (k == '5')
             {
-                Console.WriteLine("Not yet implemented!");
+                Fahk();
             }
             else if (k == '0')
             {
@@ -54,6 +60,32 @@ namespace AnimalHospital
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
             return true;
+        }
+
+        static void ListDoctors()
+        {
+            hospital.DoctorList();
+        }
+
+        static void ListPatients()
+        {
+            hospital.PatientList();
+        }
+
+        static void Fahk()
+        {
+            Console.WriteLine("Doctors name:");
+            string doctorname = Console.ReadLine();
+            Console.WriteLine("Patient name:");
+            string patientname = Console.ReadLine();
+            hospital.Together(doctorname, hospital.FindPatientByName(patientname));
+        }
+
+        static void CheckoutPatient()
+        {
+
+            string patientname = Console.ReadLine();
+            hospital.DischargePatient(hospital.FindPatientByName(patientname));
         }
 
         static void AdmitPatient()

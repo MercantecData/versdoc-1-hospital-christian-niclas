@@ -36,6 +36,7 @@ namespace AnimalHospital
             } else
             {
                 patients.Remove(patient);
+                Console.WriteLine("Patient removed");
             }
         }
 
@@ -50,6 +51,33 @@ namespace AnimalHospital
             }
 
             return null;
+        }
+
+        public void PatientList()
+        {
+            foreach(Patient apatients in patients)
+            {
+                Console.WriteLine(apatients.name + " " + apatients.age);
+            }
+        }
+        public void DoctorList()
+        {
+            foreach (Doctor adoctors in doctors)
+            {
+                Console.WriteLine(adoctors.name + " " + adoctors.speciality);
+            }
+        }
+
+        public void Together(string dname, Patient patient)
+        {
+            foreach(Doctor d in doctors)
+            {
+                if(d.name == dname)
+                {
+                    Console.WriteLine("Found Doctor");
+                    d.assignedPatients.Add(patient);
+                }
+            }
         }
     }
 }
