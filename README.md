@@ -3,10 +3,10 @@
 I skal nu arbejde 2 og 2 sammen om at udvide på dette lille hospitals projekt.
 
 Følgende udvidelser skal gøre således man kan:
-1. Udskrive en patient fra hospitalet, når man trykker 2 i hovedmenuen.
-2. Se en liste over alle patienter i hospitalet når man trykker 3 i hovedmenuen.
-3. Se en liste over alle ansatte læger på hospitalet når man trykker 4 i hovedmenuen.
-4. Angive en specifik doctor til en specifik patient når man trykker 5 i hovedmenuen.
+1. Udskrive en patient fra hospitalet, når man trykker 2 i hovedmenuen. CHECK
+2. Se en liste over alle patienter i hospitalet når man trykker 3 i hovedmenuen. CHECK
+3. Se en liste over alle ansatte læger på hospitalet når man trykker 4 i hovedmenuen. CHECK
+4. Angive en specifik doctor til en specifik patient når man trykker 5 i hovedmenuen. CHECK
 
 Men det første i skal gøre er at lave feature branches til hver af de fire opgaver. Derefter deler i opgaverne imellem jer og går i gang med at arbejde på hver jeres opgave.
 
