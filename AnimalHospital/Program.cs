@@ -40,20 +40,13 @@ namespace AnimalHospital
             } 
             else if(k == '3')
             {
-                Console.WriteLine("");
-                Console.WriteLine(" ");
-                Console.WriteLine("Patient name: ");
-                CheckoutPatient();
-
-            } 
-            else if(k == '3')
-            {
                 Console.WriteLine(" ");
                 ListPatients();
             }
             else if (k == '4')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine(" ");
+                ListDoctors();
             }
             else if (k == '5')
             {
@@ -67,6 +60,11 @@ namespace AnimalHospital
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
             return true;
+        }
+
+        static void ListDoctors()
+        {
+            hospital.DoctorList();
         }
 
         static void ListPatients()
