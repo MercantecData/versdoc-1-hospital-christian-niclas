@@ -60,5 +60,12 @@ namespace AnimalHospital
                 Console.WriteLine(apatients.name + " " + apatients.age);
             }
         }
+        public void DoctorList()
+        {
+            foreach (Doctor adoctors in doctors)
+            {
+                Console.WriteLine(adoctors.name + " " + adoctors.speciality);
+            }
+        }
     }
 }
