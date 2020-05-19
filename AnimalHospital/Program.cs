@@ -69,24 +69,18 @@ namespace AnimalHospital
             return true;
         }
 
-        static void Fahk()
-        {
-            string patientname = Console.ReadLine();
-            hospital.Together(hospital.FindPatientByName(patientname));
-        }
-
         static void ListPatients()
         {
             hospital.PatientList();
         }
 
-        static void Fahk()
-        {
-            Console.WriteLine("Doctors name:");
-            string doctorname = Console.ReadLine();
-            Console.WriteLine("Patient name:");
-            string patientname = Console.ReadLine();
-            hospital.Together(doctorname, hospital.FindPatientByName(patientname));
+        static void Fahk()
+        {
+            Console.WriteLine("Doctors name:");
+            string doctorname = Console.ReadLine();
+            Console.WriteLine("Patient name:");
+            string patientname = Console.ReadLine();
+            hospital.Together(doctorname, hospital.FindPatientByName(patientname));
         }
 
         static void CheckoutPatient()
