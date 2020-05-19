@@ -5,16 +5,22 @@ namespace AnimalHospital
 {
     class Program
     {
+        //Makes it possible to call functions and list from Hospital.cs
         public static Hospital hospital;
          
         static void Main(string[] args)
         {
+            //Tags data from InitializeHospital(); and send it to Hospital constructor
             hospital = InitializeHospital();
+            //runs MainMenu(); on repeat
             while (MainMenu()) {}
 
             Console.WriteLine("Goodbye!");
         }
-
+        /// <summary>
+        /// All user options is create her
+        /// </summary>
+        /// <returns></returns>
         static bool MainMenu()
         {
             Console.Clear();
@@ -27,6 +33,7 @@ namespace AnimalHospital
             Console.WriteLine("0. Quit the Program");
             Console.WriteLine();
 
+            //Var is the option the use choice 
             var k = Console.ReadKey().KeyChar;
             if(k == '1')
             {
@@ -61,17 +68,23 @@ namespace AnimalHospital
             Console.ReadKey();
             return true;
         }
-
-        static void ListDoctors()
-        {
-            hospital.DoctorList();
+        /// <summary>
+        /// Prints out all the doctors found in DoctorList();
+        /// </summary>
+        static void ListDoctors()
+        {
+            hospital.DoctorList();
         }
-
-        static void ListPatients()
-        {
+        /// <summary>
+        /// Prints out all the patients found in PatientsList();
+        /// </summary>
+        static void ListPatients()
+        {
             hospital.PatientList();
         }
-
+        /// <summary>
+        /// Tages 2 user inputs and insert them into Together();
+        /// </summary>
         static void Fahk()
         {
             Console.WriteLine("Doctors name:");
@@ -80,14 +93,17 @@ namespace AnimalHospital
             string patientname = Console.ReadLine();
             hospital.Together(doctorname, hospital.FindPatientByName(patientname));
         }
-
+        /// <summary>
+        /// Tages a user input and inserts it into DischargePatient();
+        /// </summary>
         static void CheckoutPatient()
-        {
-
+        {
             string patientname = Console.ReadLine();
             hospital.DischargePatient(hospital.FindPatientByName(patientname));
         }
-
+        /// <summary>
+        /// Tages 2 user inputs and inserts them into AdmitTo();
+        /// </summary>
         static void AdmitPatient()
         {
             string name;
@@ -104,7 +120,10 @@ namespace AnimalHospital
 
             new Patient(name, age).AdmitTo(hospital);
         }
-
+        /// <summary>
+        /// Creates 4 doctors and adds them to doctors list
+        /// </summary>
+        /// <returns></returns>
         static Hospital InitializeHospital()
         {
             Hospital hospital = new Hospital("Animal Hospital");

@@ -15,7 +15,10 @@ namespace AnimalHospital
             this.name = name;
             this.age = age;
         }
-
+        /// <summary>
+        /// Sends 2 user input to AdmitPatient();
+        /// </summary>
+        /// <param name="hospital"></param>
         public void AdmitTo(Hospital hospital)
         {
             hospital.AdmitPatient(this);
